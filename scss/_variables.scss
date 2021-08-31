@@ -1,0 +1,32 @@
+
+$custom-black: #0D0D0D;
+$custom-gold: #c59d5f;
+// $custom-gold: gold;
+
+$custom-white: #FFFCF4;
+$white-border: rgba(255, 255, 255, 0.322);
+$sofia-font: "sofia";
+$main-font: 'Montserrat', sans-serif;
+
+section {
+  overflow: hidden;
+}
+.title {
+      h1 {
+    font-family: "monument-regular";
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    span {
+      color: transparent;
+      -webkit-text-stroke: 1px white;
+    }
+}
+}
+
+p,
+li {
+  font-family: $main-font;
+  font-weight: 400;
+}

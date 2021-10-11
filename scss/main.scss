@@ -35,7 +35,7 @@ html {
 body {
   // overflow-y:hidden; // change with JS after the preloader
   background-color: black;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 // PRELOADER ========================================================================
 
@@ -72,7 +72,6 @@ body {
   bottom: -1.2vw;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  
 }
 .loading-bottom {
   color: white;
@@ -83,7 +82,6 @@ body {
   top: -1.3vw;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-
 }
 .preloader-svg {
   width: 100%;
@@ -112,11 +110,11 @@ body {
   width: 100%;
   height: 100vh;
   background: #0d0d0d;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
+  // stroke-dasharray: 2000;
+  // stroke-dashoffset: 2000;
   z-index: 0;
 
-  animation: dash 2.5s 4s ease-in forwards;
+  // animation: dash 2.5s 4s ease-in forwards;
 }
 
 @keyframes dash {
@@ -133,13 +131,10 @@ body {
   z-index: 99;
   display: grid;
 
-
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  grid-template-rows:1fr 1fr 1fr;
-
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 .cel {
-
   // max-width: 100%;
   // height: 100%;
   // min-height: 33.3vh;
@@ -150,8 +145,7 @@ body {
 }
 .logo {
   img {
-      max-width: 30%;
-
+    max-width: 30%;
   }
 }
 .cel1 {
@@ -175,22 +169,19 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
-    transition: background-color .5s linear;
-
+  transition: background-color 0.5s linear;
 
   span {
     margin-top: 5px;
-      font-size: .8rem;
-
+    font-size: 0.8rem;
   }
-   &:hover {
+  &:hover {
     color: black;
     background-color: $custom-white;
   }
-
 }
 .burger {
-   width: 70px;
+  width: 70px;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -202,7 +193,6 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
-
 }
 
 .titleArea {
@@ -246,9 +236,7 @@ body {
   }
 }
 
-
 .burgerMenu {
-
   svg {
     width: 3rem;
     cursor: pointer;
@@ -259,7 +247,6 @@ body {
     }
   }
 }
-
 
 .hero {
   grid-column: 2/4;
@@ -290,7 +277,7 @@ body {
   font-family: $main-font;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color .5s linear;
+  transition: background-color 0.5s linear;
   color: white;
   a {
     width: 100%;
@@ -299,7 +286,7 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 1;
-    transition:  opacity 8s ease-in-out;
+    transition: opacity 8s ease-in-out;
   }
   &:hover {
     color: black;
@@ -313,8 +300,8 @@ body {
   z-index: -10;
 }
 .hide-hero {
-    grid-column: 2/2;
-    grid-row: 2/2;
+  grid-column: 2/2;
+  grid-row: 2/2;
 }
 
 .scroll {
@@ -333,9 +320,11 @@ body {
   }
 }
 .scroll-right {
- grid-row: 3/3;
+  grid-row: 3/3;
   grid-column: 4/4;
 }
+
+// ABOUT SECTION  =============================================================
 
 .section-two {
   width: 100%;
@@ -344,18 +333,18 @@ body {
 
 .background-two {
   width: 51%;
-  height: 80vh;
+  height: auto;
   background-color: $custom-black;
   margin: auto;
   position: relative;
   z-index: 1;
-  svg {
-    width: 100%;
-    height: 120vh;
-  }
+  border: 1px solid $white-border;
+  border-top: none;
+  border-bottom: none;
 }
 .content-section-two {
-  position: absolute;
+  // position: absolute;
+
   width: 100%;
   height: 100%;
   top: 0;
@@ -383,7 +372,6 @@ body {
   border: 1px solid $white-border;
   border-bottom: none;
   border-top: none;
-
 }
 
 .about-me-text {
@@ -403,6 +391,7 @@ body {
   width: 100%;
   margin: auto;
   height: 60vh;
+  max-height: 600px;
   min-height: 28rem;
   //   border: 3px solid white;
   display: flex;
@@ -416,7 +405,6 @@ body {
   position: relative;
   border-right: 1px solid $white-border;
   background-color: $custom-black;
-  transition: 0.3s all linear;
 }
 .project-right {
   width: 50%;
@@ -434,6 +422,7 @@ body {
 }
 .project-mockup {
   width: 30%;
+  max-height: 500px;
   position: absolute;
   bottom: 0;
   cursor: pointer;
@@ -444,13 +433,16 @@ body {
 .mockup-right {
   left: 73%;
 }
-
+.project-info-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .project-text-container {
-  max-height: 65%;
   color: #fffcf4;
-  padding-bottom: 1rem;  
+  padding-bottom: 1rem;
   text-align: justify;
-  border-bottom: 1px solid $white-border;
 
   h3 {
     font-family: $main-font;
@@ -469,11 +461,13 @@ body {
 
 .logos-container {
   padding: 0 20%;
-  margin-top: 2rem;
+  height: 200px;
   margin-bottom: 2rem;
   color: white;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid $white-border;
+  border-bottom: 1px solid $white-border;
 
   svg {
     width: 10%;
@@ -496,11 +490,10 @@ body {
   font-size: 1rem;
   padding: 0.5rem 0.7rem;
   margin: 1rem;
-  border-radius: 20px;
-  border: none;
+  border: 1px solid $white-border;
   cursor: pointer;
-  background: white;
-  color: #0d0d0d;
+  background: transparent;
+  color: white;
   font-family: $sofia-font;
   transition: 0.1s all linear;
 
@@ -515,37 +508,39 @@ body {
 }
 
 .live-btn {
-  background-color: $custom-gold;
+  // background-color: $custom-gold;
+  color: $custom-gold;
+  border-color: $custom-gold;
 
   &:hover {
-    background-color: white;
+    background-color: $custom-gold;
     border: 1px solid $custom-gold;
-    color: $custom-gold;
+    color: black;
   }
 }
 .code-btn {
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: 1px solid white;
   }
 }
 
-// CONTACT SECTION ============================================================================
+// CONTACT SECTION =======================================================================
 .bg-contact {
   width: 50%;
   position: absolute;
   z-index: -1;
-
 }
 .contact {
   width: 50%;
   // height: 100vh;
   margin: auto;
   z-index: 2;
+  border: 1px solid $white-border;
+  border-top: none;
 }
-.contact
-.contact-title {
+.contact .contact-title {
   width: 100%;
   text-align: center;
   color: $custom-white;
@@ -557,7 +552,7 @@ body {
   height: 100%;
   color: white;
   display: flex;
-  
+
   z-index: 2;
 }
 .contact-form {
@@ -566,17 +561,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
 
   form {
     width: 50vw;
-     display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
   }
-  
 }
 .nameC,
 .email,
@@ -586,12 +579,11 @@ body {
   background-color: $custom-black;
   color: $custom-white;
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
   border: none;
   border-bottom: 1px solid $white-border;
   font-family: $main-font;
   font-size: 1rem;
-  
-  
 
   &::placeholder {
     color: white;
@@ -599,7 +591,7 @@ body {
 }
 .message {
   height: 250px;
-   resize: none;
+  resize: none;
 }
 .contact-btn {
   border: 1px solid $white-border;
@@ -611,7 +603,7 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 
   &:hover {
     background-color: $custom-white;
@@ -622,35 +614,40 @@ body {
   width: 50%;
   position: relative;
   padding: 2rem;
- 
-     &:hover {
-       img {
-                    filter: opacity(60%) blur(3px);
+  border-left: 1px solid $white-border;
 
-       }
+  &:hover {
+    img {
+      filter: opacity(60%) blur(3px);
+    }
   }
   img {
-    width: 100%; height: 95%;
-    
-    object-fit:fill;
+    width: 100%;
+    height: 95%;
+
+    object-fit: fill;
     z-index: 0;
     cursor: pointer;
-    transition: filter .2s ease-in-out;
+    transition: filter 0.2s ease-in-out;
   }
   .top-icon {
     z-index: 99;
-   position: absolute;
-   top: 40%;
-   left: 40%;
-
+    position: absolute;
+    top: 40%;
+    left: 40%;
   }
-
- 
 }
 
 // MEDIA QUERY ==============================================================
 
+// TABLET VIEW ==============================================================
+
 @media (max-width: 1100px) {
+  .titleArea {
+    h1 {
+      font-size: 2rem;
+    }
+  }
 
   .background-two {
     width: 100%;
@@ -658,9 +655,13 @@ body {
   .content-section-two {
     width: 100%;
   }
+  .title-three {
+    width: 100%;
+  }
   .project-row {
     flex-direction: column;
     height: auto;
+    max-height: none;
 
     &:nth-child(3),
     &:nth-child(5) {
@@ -671,77 +672,88 @@ body {
   .project-right {
     width: 100%;
   }
+
   .project-text-container {
     padding-bottom: 1rem;
   }
 
-
-
-}
-
-
-
-@media (max-width: 1100px) {
-  .titleArea {
-    h1 {
-          font-size: 2rem;
-
-    }
+  .contact {
+    width: 95%;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.384);
+  }
+  .contact-form {
+    display: inline;
+    padding: 2rem;
+    height: 500px;
+  }
+  .nameC,
+  .email,
+  .message {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .contact-btn {
+    width: 100%;
   }
 }
 
-
+// MOBILE VIEW ==============================================================
 
 @media (max-width: 600px) {
+  .title {
+    h1 {
+      font-size: 2.7rem;
+      line-height: 2.3rem;
+    }
+  }
   .background {
     display: none;
   }
   .grid {
     height: 100vh;
-    grid-template-columns:1fr 1fr;
-  grid-template-rows:.3fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
   }
   .cel {
-      border: 1px solid $white-border;
-
+    border: 1px solid $white-border;
   }
 
-.titleArea {
-  width: 100%;
-  background-color: transparent;
-  grid-row: 2/3;
-  grid-column: 1/3;
-}
-.logo {
-  grid-row: 1/2;
-  grid-column: 1/2;
-}
-.burger,
-.top-icon {
-  border: none;
-}
-.burgerMenu {
-  grid-row: 1/2;
-  grid-column: 2/3;
-}
-.hero {
-   grid-row: 3/5;
-  grid-column: 1/3;
-}
-.hide-hero {
-   grid-row: 3/4;
-  grid-column: 1/2;
-}
-.cel5, .cel8 {
-  display: none;
-}
-.scroll {
-  display: none;
-}
+  .titleArea {
+    width: 100%;
+    background-color: transparent;
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  .logo {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .burger,
+  .top-icon {
+    border: none;
+  }
+  .burgerMenu {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .hero {
+    grid-row: 3/5;
+    grid-column: 1/3;
+  }
+  .hide-hero {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .cel5,
+  .cel8 {
+    display: none;
+  }
+  .scroll {
+    display: none;
+  }
 
-
-
-// projects section ======
+  // mobile projects section ======
 
   .project-left,
   .project-right {
@@ -763,5 +775,19 @@ body {
   .project-btn-container {
     padding: 0;
     margin-bottom: 1rem;
+  }
+  .logos-container{
+
+    height: 100px;
+  }
+
+
+  //mobile contact section ====
+
+  .contact-right {
+    display: none;
+  }
+  .contact-form {
+    width: 100%;
   }
 }

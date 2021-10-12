@@ -333,6 +333,7 @@ body {
 
 .background-two {
   width: 51%;
+
   height: auto;
   background-color: $custom-black;
   margin: auto;
@@ -369,7 +370,7 @@ body {
   padding: 2rem 0;
   z-index: 99;
   line-height: 2.5rem;
-  border: 1px solid $white-border;
+  // border: 1px solid $white-border;
   border-bottom: none;
   border-top: none;
 }
@@ -377,13 +378,47 @@ body {
 .about-me-text {
   color: white;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
+.tags-container {
+  width: 100%;
+  border-top: 1px solid $white-border;
+  border-bottom: 1px solid $white-border;
+  padding-top: .5rem;
+  margin-bottom: 2rem;
+
+
+}
+.tag {
+
+  font-family: $sofia-font;
+  display:inline-block;
+  width: auto;
+  padding: .5rem 1rem;
+  background-color: $custom-white;
+  color:$custom-black;
+  border: 1px solid $custom-gold;
+  border-radius: 10px;
+  margin-bottom: .5rem;
+  margin-right: .5rem;
+  transition: 0.3s all linear;
+  cursor: pointer;
+ 
+  
+  &:hover {
+    background-color: $custom-gold;
+  }
+}
+// .tag:nth-child(odd) {
+//   background-color: $custom-gold;
+// }
 
 // PROJECTS SECTION  =============================================================
 
 .section-three {
   width: 95%;
   margin: auto;
+  max-width: 2000px;
   //   height: 100vh;
 }
 
@@ -460,18 +495,19 @@ body {
 }
 
 .logos-container {
-  padding: 0 20%;
-  height: 200px;
+  padding: 0;
+  // height: 200px;
   margin-bottom: 2rem;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-top: 1px solid $white-border;
   border-bottom: 1px solid $white-border;
 
   svg {
-    width: 10%;
+    width: 50px;
     fill: white;
+    margin: 1rem;
   }
 }
 .project-btn-container {
@@ -637,6 +673,22 @@ body {
     left: 40%;
   }
 }
+.media-icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 100px;
+  background-color: $custom-white;
+
+  .media-icon {
+    margin-right: 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  
+}
 
 // MEDIA QUERY ==============================================================
 
@@ -664,7 +716,8 @@ body {
     max-height: none;
 
     &:nth-child(3),
-    &:nth-child(5) {
+    &:nth-child(5),
+    &:nth-child(7) {
       flex-direction: column-reverse;
     }
   }

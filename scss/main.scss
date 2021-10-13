@@ -267,7 +267,6 @@ body {
   grid-area: content;
   width: 100%;
   height: 100%;
-  // background-color: lavender;
   z-index: 99;
 }
 // prova===============================================================
@@ -344,8 +343,6 @@ body {
   border-bottom: none;
 }
 .content-section-two {
-  // position: absolute;
-
   width: 100%;
   height: 100%;
   top: 0;
@@ -370,7 +367,6 @@ body {
   padding: 2rem 0;
   z-index: 99;
   line-height: 2.5rem;
-  // border: 1px solid $white-border;
   border-bottom: none;
   border-top: none;
 }
@@ -379,7 +375,7 @@ body {
   color: white;
   font-size: 1.5rem;
   margin-bottom: 2rem;
-   span {
+  span {
     color: $custom-gold;
   }
 }
@@ -387,34 +383,27 @@ body {
   width: 100%;
   border-top: 1px solid $white-border;
   border-bottom: 1px solid $white-border;
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   margin-bottom: 2rem;
-
-
 }
 .tag {
-
   font-family: $sofia-font;
   display:inline-block;
-  width: auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: $custom-white;
-  color:$custom-black;
+  color: $custom-black;
   border: 1px solid $custom-gold;
   border-radius: 10px;
-  margin-bottom: .5rem;
-  margin-right: .5rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
   transition: 0.3s all linear;
   cursor: pointer;
- 
-  
+
   &:hover {
     background-color: $custom-gold;
   }
 }
-// .tag:nth-child(odd) {
-//   background-color: $custom-gold;
-// }
+
 
 // PROJECTS SECTION  =============================================================
 
@@ -422,7 +411,6 @@ body {
   width: 95%;
   margin: auto;
   max-width: 2000px;
-  //   height: 100vh;
 }
 
 .project-row {
@@ -431,9 +419,10 @@ body {
   height: 60vh;
   max-height: 600px;
   min-height: 28rem;
-  //   border: 3px solid white;
   display: flex;
+  // align-items: center;
   border: 1px solid $white-border;
+  background-color: $custom-black;
 }
 
 .project-left {
@@ -442,14 +431,13 @@ body {
   padding: 2.5rem;
   position: relative;
   border-right: 1px solid $white-border;
-  background-color: $custom-black;
 }
 .project-right {
   width: 50%;
   height: 100%;
   padding: 2.5rem;
   position: relative;
-  background-color: $custom-black;
+
 }
 
 .project-img {
@@ -480,7 +468,7 @@ body {
 .project-text-container {
   color: #fffcf4;
   padding-bottom: 1rem;
-  text-align: justify;
+  // text-align: justify;
 
   h3 {
     font-family: $main-font;
@@ -499,7 +487,6 @@ body {
 
 .logos-container {
   padding: 0;
-  // height: 200px;
   margin-bottom: 2rem;
   color: white;
   display: flex;
@@ -516,7 +503,7 @@ body {
 .project-btn-container {
   padding: 0 3rem;
   position: relative;
-  padding-bottom: 3rem;
+  // padding-bottom: 3rem;
   display: flex;
   justify-content: center;
 }
@@ -573,7 +560,6 @@ body {
 }
 .contact {
   width: 50%;
-  // height: 100vh;
   background-color: $custom-black;
   margin: auto;
   z-index: 2;
@@ -595,8 +581,10 @@ body {
 
   z-index: 2;
 }
+
 .contact-form {
   width: 50%;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -604,6 +592,7 @@ body {
 
   form {
     width: 50vw;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -656,6 +645,7 @@ body {
   padding: 2rem;
   border-left: 1px solid $white-border;
 
+
   &:hover {
     img {
       filter: opacity(60%) blur(3px);
@@ -664,8 +654,9 @@ body {
   img {
     width: 100%;
     height: 95%;
+            max-height: 500px;
 
-    object-fit: fill;
+    object-fit: cover;
     z-index: 0;
     cursor: pointer;
     transition: filter 0.2s ease-in-out;
@@ -691,7 +682,6 @@ body {
     font-size: 3rem;
     cursor: pointer;
   }
-  
 }
 
 // MEDIA QUERY ==============================================================
@@ -833,11 +823,9 @@ body {
     padding: 0;
     margin-bottom: 1rem;
   }
-  .logos-container{
-
+  .logos-container {
     height: 100px;
   }
-
 
   //mobile contact section ====
 

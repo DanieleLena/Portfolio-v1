@@ -379,6 +379,13 @@ body {
     color: $custom-gold;
   }
 }
+.little-title{
+  font-family: "monument-regular";
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $custom-white;
+}
 .tags-container {
   width: 100%;
   border-top: 1px solid $white-border;
@@ -496,7 +503,7 @@ body {
 
   svg {
     width: 50px;
-    fill: white;
+    fill: $custom-white;
     margin: 1rem;
   }
 }
@@ -546,7 +553,7 @@ body {
 }
 .code-btn {
   &:hover {
-    background-color: white;
+    background-color: $custom-white;
     color: black;
     border: 1px solid white;
   }
@@ -667,6 +674,10 @@ body {
     top: 40%;
     left: 40%;
   }
+}
+.follow-title {
+  margin: 2rem 0;
+  text-align: center;
 }
 .media-icon-container {
   width: 100%;

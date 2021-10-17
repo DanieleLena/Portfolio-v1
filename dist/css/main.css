@@ -203,6 +203,7 @@ body {
   to {
     top: 100%;
     z-index: -10;
+    display: none;
   }
 }
 
@@ -210,6 +211,7 @@ body {
   to {
     top: 100%;
     z-index: -10;
+    display: none;
   }
 }
 

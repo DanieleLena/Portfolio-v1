@@ -1,20 +1,19 @@
-const btn = document.querySelector(".burger-btn");
+const btn = document.querySelector(".menu-toggle");
 
 const hamburgerAnimation = () => {
-  btn.classList.toggle("active");
-  btn.classList.toggle("not-active");
+  btn.classList.toggle("is-active");
 };
 
-btn.addEventListener("click", () => {
-  hamburgerAnimation();
-});
-
-const burgerBtn = document.querySelector(".burgerMenu");
+const burgerBtn = document.querySelector(".burger");
 const about = document.getElementById("about-menu");
 const contact = document.getElementById("contact-menu");
 const project = document.getElementById("project-menu");
 
-burgerBtn.addEventListener("click", () => toggleMenu());
+burgerBtn.addEventListener("click", () => {
+toggleMenu();
+hamburgerAnimation();
+});
+
 about.addEventListener("click", () => {
   hamburgerAnimation();
   toggleMenu();
@@ -31,7 +30,6 @@ project.addEventListener("click", () => {
 const toggleMenu = () => {
   heroContainer.classList.toggle("hide-hero");
   heroContainer.classList.toggle("menu");
-  // onWindowResize()
   about.classList.toggle("hide-menu");
   contact.classList.toggle("hide-menu");
   project.classList.toggle("hide-menu");
